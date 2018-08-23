@@ -19,8 +19,8 @@ class PigLatinizer
     consonants = ('a'..'z') - vowels
 
     return word + "ay" if vowels.include?(word[0])
-    if CONSONANTS.include?(word[0])
-      return word[2..-1] + word[0..1] + "ay" if CONSONANTS.include?(word[1])
+    if consonants.include?(word[0])
+      return word[2..-1] + word[0..1] + "ay" if consonants.include?(word[1])
       return word[2..-1] + word[0] + "ay"
     end
     word
