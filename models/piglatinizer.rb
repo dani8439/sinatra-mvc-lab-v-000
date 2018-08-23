@@ -1,6 +1,4 @@
 class PigLatinizer
-  # Create a constant array of vowels
-  VOWELS = %w[a e i o u A E I O U]
 
 
   # need to split the sentence
@@ -9,16 +7,7 @@ class PigLatinizer
     phrase.split.collect{|word| piglatinize(word)}.join(" ")
   end
 
-  def piglatinize(word)
-    return word << "way" if VOWELS.include?(word[0])
-    word = word.split("")
-
-    until VOWELS.include?(word[0])
-      letter = word.shift
-      word = word << letter
-    end
-
-    word.join + "ay"
-  end
+  def consonant?(char)
+    !char.match(/[aAeEiIoOuU]/)
 
 end
