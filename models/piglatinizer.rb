@@ -25,6 +25,7 @@ class PigLatinizer
         return word + "ay"
       end
     end
+    
   end
 
 
