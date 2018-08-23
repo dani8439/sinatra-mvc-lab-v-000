@@ -4,6 +4,7 @@ class PigLatinizer
 
     def piglatinize(text)
         text.split.map do |word|
+          #regex match 
           if /\A[aeiou]/i.match(word)
             "#{word}way"
           else
