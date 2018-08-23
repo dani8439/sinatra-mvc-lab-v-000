@@ -7,8 +7,8 @@ class PigLatinizer
     if text.start_with?(vowels)
       text = text + "way"
     else
-      text
-      
+      text.split(/[aeiou]/).first
+
   end
 
   def to_pig_latin(phrase)
