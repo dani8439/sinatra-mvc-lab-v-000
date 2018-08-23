@@ -9,6 +9,7 @@ class PigLatinizer
           else
             #finds where the word needs to be split.
             cons = word.split(/[aeiou]/).first
+            #substitutes the beginning of word(cons) with blank, then tacks consonant + latinzed bit on end
             "#{word.sub(cons,"")}#{cons}ay"
           end
           end.join(' ')
@@ -26,7 +27,7 @@ class PigLatinizer
   #   else
   #     cons = text.split(/[aeiou]/).first
   #      "#{text.sub(cons,"")}#{cons}ay"
-  #      #substitutes the beginning of word(cons) with blank, then tacks consonant + latinzed bit on end
+  #      
   #   end
   # end
   #
