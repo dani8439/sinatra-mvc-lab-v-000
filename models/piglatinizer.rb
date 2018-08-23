@@ -15,5 +15,10 @@ class PigLatinizer
     return word << "way" if VOWELS.include?(word[0])
     word = word.split("")
 
+    until VOWELS.include?(word[0])
+      letter = word.shift 
+      word = word << letter 
+    end
+
 
 end
