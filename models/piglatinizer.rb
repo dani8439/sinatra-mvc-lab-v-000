@@ -1,9 +1,10 @@
 class PigLatinizer
-
-
   def consonant?(char)
     !char.match(/[aAeEiIoOuU]/)
     #scans a regext to see if character stards wtih a vowel or consonant -- instead of setting VOWELS = %w[a e i o u A E I O U]
+  end
+
+  def piglatinize(word)
   end
 
   # need to split the sentence
