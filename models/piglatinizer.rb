@@ -12,29 +12,32 @@ class PigLatinizer
     phrase.split.collect{|word| piglatinize(word)}.join(" ")
   end
 
+
   def piglatinize(word)
-    return word << "way" if VOWELS.include?(word[0])
-    word = word.split("")
-
-    until VOWELS.include?(word[0])
-      letter = word.shift
-      word = word << letter
+    if word =~ (/\A[aeiou]/i)
+      word = word + 'ay'
+    elsif word =~ (/\A[^aeiou]/i)
+      match = /\A[^aeiou]/i.match(word)
+      word = match.post_match + match.to_s + 'ay'
     end
-
-    word.join + "ay"
+    word
   end
 
-end
+#   def piglatinize(word)
+#     return word << "way" if VOWELS.include?(word[0])
+#     word = word.split("")
+# 
+#     until VOWELS.include?(word[0])
+#       letter = word.shift
+#       word = word << letter
+#     end
+# 
+#     word.join + "ay"
+#   end
+# 
+# end
 
-def piglatinize(word)
-  if word =~ (/\A[aeiou]/i)
-    word = word + 'ay'
-  elsif word =~ (/\A[^aeiou]/i)
-    match = /\A[^aeiou]/i.match(word)
-    word = match.post_match + match.to_s + 'ay'
-  end
-  word
-end
+
 
 
 # def piglatinize(word)
