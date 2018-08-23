@@ -1,8 +1,9 @@
 class PigLatinizer
 
-  attr_accessor :text
+  attr_reader :text
 
   def piglatinize(text)
+    text.scan(/[aeiou]/)
   end
 
   def to_pig_latin(phrase)
