@@ -22,20 +22,20 @@ class PigLatinizer
     end
     word
   end
+
+  def piglatinize(word)
+    return word << "way" if VOWELS.include?(word[0])
+    word = word.split("")
+
+    until VOWELS.include?(word[0])
+      letter = word.shift
+      word = word << letter
+    end
+
+    word.join + "ay"
+  end
+
 end
-#   def piglatinize(word)
-#     return word << "way" if VOWELS.include?(word[0])
-#     word = word.split("")
-#
-#     until VOWELS.include?(word[0])
-#       letter = word.shift
-#       word = word << letter
-#     end
-#
-#     word.join + "ay"
-#   end
-#
-# end
 
 
 
