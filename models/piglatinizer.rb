@@ -20,20 +20,6 @@ class PigLatinizer
     end
   end
 
-  # def piglatinize(text)
-  #   vowels = %[a e i o u A E I O U]
-  #   if text.start_with?(vowels)
-  #     "#{text}way"
-  #   else
-  #     cons = text.split(/[aeiou]/).first
-  #      "#{text.sub(cons,"")}#{cons}ay"
-  #      
-  #   end
-  # end
-  #
-  # def to_pig_latin(phrase)
-  #   phrase.split.collect{|word| piglatinize(word) }.join(" ")
-  # end
 
   # Old - Doesn't work.
   # class PigLatinizer
