@@ -3,7 +3,7 @@ require 'pry'
 
 class PigLatinizer
   # Create a constant array of vowels
-  VOWELS = %w[a e i o u A E I O U]
+
 
 
   # need to split the sentence
@@ -12,7 +12,21 @@ class PigLatinizer
     phrase.split.collect{|word| piglatinize(word)}.join(" ")
   end
 
+
+
+  vowels = ['a', 'e', 'i', 'o', 'u']
+consonants = ('a'..'z').to_a - vowels
+return str + "ay" if vowels.include?(str[0])
+if consonants.include?(str[0])
+   return str[2..-1] + str[0..1] + "ay" if consonants.include?(str[1])
+   return str[1..-1] + str[0] + "ay"
+end
+str
+
   def piglatinize(word)
+    VOWELS = %w[a e i o u]
+    CONSONANTS = ('a'..'z') -
+
     return word << "way" if VOWELS.include?(word[0])
     word = word.split("")
 
