@@ -9,7 +9,8 @@ class PigLatinizer
     else
       cons = text.split(/[aeiou]/).first
       #finds where the word needs to be split
-      "#{cons}ay"
+      "#{text}#{cons}ay"
+       "#{text.sub(cons,"")}#{cons}ay"
     end
 
   end
