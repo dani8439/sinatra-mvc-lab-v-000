@@ -7,8 +7,8 @@ class PigLatinizer
     if text.start_with?(vowels)
       "#{text}way"
     else
-      text.split(/[aeiou]/).first
-      
+      cons = text.split(/[aeiou]/).first
+
 
   end
 
