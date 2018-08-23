@@ -3,7 +3,7 @@ class PigLatinizer
   attr_reader :text
 
   def piglatinize(text)
-    vowels = %[a e h i o u A E H I O U]
+    vowels = %[a e i o u A E I O U]
     if text.start_with?(vowels)
       text = text + "way"
     else
