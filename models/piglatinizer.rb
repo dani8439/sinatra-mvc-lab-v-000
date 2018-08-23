@@ -1,6 +1,15 @@
 class PigLatinizer
 
   def piglatinize(word)
+    if word[0].downcase.match(/[aeiou]/)
+      word = word + "way"
+    else
+      until word.split('')[0].downcase.match(/[aeiou]/)
+        word = word.split('').rotate(1).join
+      end
+      word = word.split('').join + "ay"
+    end
+    word
   end
 
   def to_pig_latin(phrase)
