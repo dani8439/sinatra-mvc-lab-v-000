@@ -3,10 +3,9 @@ class PigLatinizer
   attr_reader :text
 
     def piglatinize(text)
-      vowels = %[a e i o u A E I O U]
         text.split.map do |word|
-          if text.start_with?(vowels)
-            "#{text}way"
+          if /\A[aeiou]/i.match(word)
+            "#{word}way"
           else
             cons = word.split(/[aeiou]/).first
             "#{word.sub(cons,"")}#{cons}ay"
