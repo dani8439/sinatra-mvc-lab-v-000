@@ -3,7 +3,8 @@ class PigLatinizer
   attr_reader :text
 
   def piglatinize(text)
-    text.scan(/[aeiou]/)
+    vowels = %[a e i o u A E I O U]
+    if text.start_with?(vowels)
   end
 
   def to_pig_latin(phrase)
