@@ -6,5 +6,6 @@ class PigLatinizer
   end
 
   def starts_with
+    text.scan(/[^aeiou]/)
   end
 end
