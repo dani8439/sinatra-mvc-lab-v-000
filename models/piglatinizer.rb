@@ -51,7 +51,7 @@ class PigLatinizer
 # 
 #   class PigLatinizer
 #
-# Too Bloody Convoluted!
+# Too Bloody Convoluted! wtf?
 #   def piglatinize(word)
 #
 #     #words that start with a vowel
