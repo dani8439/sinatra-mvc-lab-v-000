@@ -14,14 +14,6 @@ class PigLatinizer
 
 
 
-  vowels = ['a', 'e', 'i', 'o', 'u']
-consonants = ('a'..'z').to_a - vowels
-return str + "ay" if vowels.include?(str[0])
-if consonants.include?(str[0])
-   return str[2..-1] + str[0..1] + "ay" if consonants.include?(str[1])
-   return str[1..-1] + str[0] + "ay"
-end
-str
 
   def piglatinize(word)
     VOWELS = %w[a e i o u]
