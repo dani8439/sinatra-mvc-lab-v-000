@@ -8,6 +8,7 @@ class PigLatinizer
       "#{text}way"
     else
       text.split(/[aeiou]/).first
+      
 
   end
 
