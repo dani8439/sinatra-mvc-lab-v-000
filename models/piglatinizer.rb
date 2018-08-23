@@ -7,6 +7,7 @@ class PigLatinizer
           if /\A[aeiou]/i.match(word)
             "#{word}way"
           else
+            #finds where the word needs to be split.
             cons = word.split(/[aeiou]/).first
             "#{word.sub(cons,"")}#{cons}ay"
           end
@@ -24,7 +25,6 @@ class PigLatinizer
   #     "#{text}way"
   #   else
   #     cons = text.split(/[aeiou]/).first
-  #     #finds where the word needs to be split.
   #      "#{text.sub(cons,"")}#{cons}ay"
   #      #substitutes the beginning of word(cons) with blank, then tacks consonant + latinzed bit on end
   #   end
@@ -38,24 +38,24 @@ class PigLatinizer
   # class PigLatinizer
   #   # Create a constant array of vowels
   #   VOWELS = %w[a e i o u A E I O U]
-  # 
-  # 
+  #
+  #
   #   # need to split the sentence
   #   def to_pig_latin(phrase)
   #     # splits the sentence, then collect -- iterate over each word - piglatinize each word - then rejoin the collected words back into a sentence
   #     phrase.split.collect{|word| piglatinize(word)}.join(" ")
   #   end
-  # 
+  #
   #   def piglatinize(word)
   #     return word << "way" if VOWELS.include?(word[0])
   #     word = word.split("")
-  # 
+  #
   #     until VOWELS.include?(word[0])
   #       letter = word.shift
   #       word = word << letter
   #     end
-  # 
+  #
   #     word.join + "ay"
   #   end
-  # 
+  #
   # end
