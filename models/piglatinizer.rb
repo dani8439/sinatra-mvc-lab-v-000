@@ -1,4 +1,6 @@
 class PigLatinizer
+
+  
   def piglatinize(name)
   if name[0].downcase.match(/[aeiou]/)
     name = name + "way"
@@ -19,10 +21,6 @@ def to_pig_latin(phrase)
   phrases.join(' ')
 end
 
-
-end
-
-end
 
 
 
