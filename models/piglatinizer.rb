@@ -21,4 +21,4 @@ attr_reader :text
     def to_pig_latin(text)
       piglatinize(text)
     end
-end
+  end
