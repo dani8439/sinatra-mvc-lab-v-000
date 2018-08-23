@@ -13,9 +13,9 @@ class PigLatinizer
   word << "ay"
 end
 
-def consonant?(char)
-   !char.match(/[aAeEiIoOuU]/)
- end
+  def consonant(char)
+    !char.match(/[aeiouAEIOU]/)
+  end
 
   def to_pig_latin(phrase)
    phrase.split.collect { |word| piglatinize(word) }.join(" ")
