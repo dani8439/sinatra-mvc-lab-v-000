@@ -25,7 +25,7 @@ str
 
   def piglatinize(word)
     VOWELS = %w[a e i o u]
-    CONSONANTS = ('a'..'z') -
+    CONSONANTS = ('a'..'z') - VOWELS
 
     return word << "way" if VOWELS.include?(word[0])
     word = word.split("")
