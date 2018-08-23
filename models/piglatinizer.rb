@@ -10,15 +10,16 @@ class PigLatinizer
         cons = word.split(/[aeiou]/).first
         "#{word.sub(cons,"")}#{cons}ay"
       end
-    
-    vowels = %[a e i o u A E I O U]
-    if text.start_with?(vowels)
-      "#{text}way"
-    else
-      cons = text.split(/[aeiou]/).first
-      "cons"
     end
-    text
+
+    # vowels = %[a e i o u A E I O U]
+    # if text.start_with?(vowels)
+    #   "#{text}way"
+    # else
+    #   cons = text.split(/[aeiou]/).first
+    #   "cons"
+    # end
+    # text
 
   end
 
