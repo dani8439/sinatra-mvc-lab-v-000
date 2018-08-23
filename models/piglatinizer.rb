@@ -5,7 +5,7 @@ class PigLatinizer
   def piglatinize(text)
     vowels = %[a e i o u A E I O U]
     if text.start_with?(vowels)
-      text = text + "way"
+      "#{text}way"
     else
       cons = text.split(/[aeiou]/).first
       cons
