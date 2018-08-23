@@ -20,5 +20,8 @@ class PigLatinizer
       word = word << letter 
     end
 
+    word.join + "ay"
+  end
+
 
 end
