@@ -1,4 +1,7 @@
+class PigLatinizer
 
+  
+end
 
 # Short Version:
 # attr_reader :text
