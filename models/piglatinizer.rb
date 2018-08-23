@@ -27,15 +27,7 @@ str
     VOWELS = %w[a e i o u]
     CONSONANTS = ('a'..'z') - VOWELS
 
-    return word << "way" if VOWELS.include?(word[0])
-    word = word.split("")
-
-    until VOWELS.include?(word[0])
-      letter = word.shift
-      word = word << letter
-    end
-
-    word.join + "ay"
+    return word + "ay" if VOWELS.include?(word[0])
   end
 
 end
