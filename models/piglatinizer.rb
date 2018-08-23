@@ -1,50 +1,20 @@
-
-require 'pry'
-
 class PigLatinizer
-  # Create a constant array of vowels
-  VOWELS = %w[a e i o u A E I O U]
 
+  attr_reader :text
 
-  # need to split the sentence
-  def to_pig_latin(phrase)
-    # splits the sentence, then collect -- iterate over each word - piglatinize each word - then rejoin the collected words back into a sentence
-    phrase.split.collect{|word| piglatinize(word)}.join(" ")
-  end
+    def piglatinize(text)
+        text.split.map do |word|
+          if /\A[aeiou]/i.match(word)
+            "#{word}way"
+          else
+            cons = word.split(/[aeiou]/).first
+            "#{word.sub(cons,"")}#{cons}ay"
+          end
+          end.join(' ')
+        end
 
-
-  def piglatinize(word)
-    if word =~ (/\A[aeiou]/i)
-      word = word + 'ay'
-    elsif word =~ (/\A[^aeiou]/i)
-      match = /\A[^aeiou]/i.match(word)
-      word = match.post_match + match.to_s + 'ay'
-    end
-    word
-  end
-
-  def piglatinize(word)
-    return word << "way" if VOWELS.include?(word[0])
-    word = word.split("")
-
-    until VOWELS.include?(word[0])
-      letter = word.shift
-      word = word << letter
-    end
-
-    word.join + "ay"
-  end
+      def to_pig_latin(text)
+        piglatinize(text)
+      end
 
 end
-
-
-
-
-# def piglatinize(word)
-#   if VOWELS.include?(word[0]) == true
-#     word << "way"
-#   else
-#     last = word.slice(1..-1)
-#     first = word.slice(0)
-#     last + first + "ay"
-#   end
