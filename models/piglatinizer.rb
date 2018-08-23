@@ -9,6 +9,8 @@ class PigLatinizer
     else
       cons = text.split(/[aeiou]/).first
       text = cons + "ay"
+    end 
+    text
 
   end
 
