@@ -14,7 +14,7 @@ class PigLatinizer
   end
 
   def consonant(char)
-    !char.match(/[aeiouAEIOU]/)
+    !char.match(/[aAeEiIoOuU]/)
   end
 
   def to_pig_latin(phrase)
