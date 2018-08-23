@@ -16,9 +16,9 @@ class PigLatinizer
 
   def piglatinize(word)
     vowels = %w[a e i o u]
-    consonants = ('a'..'z') - VOWELS
+    consonants = ('a'..'z') - vowels
 
-    return word + "ay" if VOWELS.include?(word[0])
+    return word + "ay" if vowels.include?(word[0])
     if CONSONANTS.include?(word[0])
       return word[2..-1] + word[0..1] + "ay" if CONSONANTS.include?(word[1])
       return word[2..-1] + word[0] + "ay"
