@@ -8,7 +8,7 @@ class PigLatinizer
       "#{text}way"
     else
       cons = text.split(/[aeiou]/).first
-      "#{}"
+      "#{text.sub(cons,"")}"
     end
     text
 
