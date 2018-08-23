@@ -8,10 +8,10 @@ class PigLatinizer
       "#{text}way"
     else
       cons = text.split(/[aeiou]/).first
-      #finds where the word needs to be split
+      #finds where the word needs to be split.
        "#{text.sub(cons,"")}#{cons}ay"
+       #substitutes the beginning of word(cons) with blank, then tacks consonant + latinzed bit on end
     end
-
   end
 
   def to_pig_latin(phrase)
