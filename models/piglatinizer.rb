@@ -3,7 +3,7 @@ class PigLatinizer
   def piglatinize(word)
   end
 
-  def to_pig_latin(sentence)
+  def to_pig_latin(phrase)
    sentence.split.collect { |word| piglatinize(word) }.join(" ")
   end
 
