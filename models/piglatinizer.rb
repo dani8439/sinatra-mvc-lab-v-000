@@ -13,12 +13,10 @@ class PigLatinizer
           end.join(' ')
         end
 
-      def to_pig_latin(text)
-        piglatinize(text)
-      end
+    def to_pig_latin(text)
+      piglatinize(text)
     end
   end
-
 
   # def piglatinize(text)
   #   vowels = %[a e i o u A E I O U]
