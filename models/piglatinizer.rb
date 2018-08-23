@@ -15,18 +15,17 @@ class PigLatinizer
 
 
   def piglatinize(word)
-    vowels = %w[a e i o u]
-    consonants = ('a'..'z') - vowels
-
-    return word + "ay" if vowels.include?(word[0])
-    if consonants.include?(word[0])
-      return word[2..-1] + word[0..1] + "ay" if consonants.include?(word[1])
-      return word[2..-1] + word[0] + "ay"
+      vowels = %w{a e i o u}
+      word.each_char do |chr|
+      index = word.index(chr)
+      if index != 0 && vowels.include?(chr.downcase)
+        consonants = word.slice!(0..index-1)
+        return word + consonants + "ay"
+      elsif index == 0 && vowels.include?(chr.downcase)
+        return word + "ay"
+      end
     end
-    word
   end
-
-end
 
 
 # def piglatinize(word)
