@@ -34,6 +34,7 @@ class PigLatinizer
   #   phrase.split.collect{|word| piglatinize(word) }.join(" ")
   # end
 
+  # Old - Doesn't work.
   # class PigLatinizer
   #   # Create a constant array of vowels
   #   VOWELS = %w[a e i o u A E I O U]
