@@ -5,6 +5,10 @@ class PigLatinizer
   def piglatinize(text)
     vowels = %[a e i o u A E I O U]
     if text.start_with?(vowels)
+      text = text + "way"
+    else
+      
+      
   end
 
   def to_pig_latin(phrase)
