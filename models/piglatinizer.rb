@@ -1,4 +1,9 @@
 class PigLatinizer
+
+  attr_accessor :text
+
+  def piglatinize(text)
+  end
 end
 
 # Short Version:
