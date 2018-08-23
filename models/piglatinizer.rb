@@ -5,8 +5,9 @@ end
 
 
 
+# Short Version:
 # attr_reader :text
-# 
+#
 #   def piglatinize(text)
 #       text.split.map do |word|
 #         if /\A[aeiou]/i.match(word)
@@ -17,7 +18,7 @@ end
 #         end
 #         end.join(' ')
 #       end
-# 
+#
 #     def to_pig_latin(text)
 #       piglatinize(text)
 #     end
